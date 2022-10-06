@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
 namespace ComputerInfo
 {
@@ -14,7 +13,7 @@ namespace ComputerInfo
         public static bool IsLinux =>
             RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
 
-        public static new string ToString => IsWindows ? "Windows" : (IsMacOS ? "MacOS" : "Linux");
+        public new static string ToString() => IsWindows ? "Windows" : IsMacOS ? "MacOS" : "Linux";
     }
 }
 
